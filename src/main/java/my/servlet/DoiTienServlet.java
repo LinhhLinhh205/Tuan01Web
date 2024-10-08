@@ -29,22 +29,22 @@ public class DoiTienServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String loai=request.getParameter("loaingoaite");
+        int loai=Integer.parseInt(request.getParameter("loaingoaite"));
         double tien=Double.parseDouble(request.getParameter("sotien"));
         double Tientra=0;
         switch (loai) {
-            case "1":
+            case 1:
                 Tientra=tien*21380.00;               
                 break;
-            case "2":
+            case 2:
                 Tientra=tien*32622.80;
                 break;
-            case "3":
+            case 3:
                 Tientra=tien*23555.67;
-            case "4":
+            case 4:
                 Tientra=tien*178.61;
                 break;
-            case "5":
+            case 5:
                 Tientra=tien*16727.44;
                 break;
             default:
